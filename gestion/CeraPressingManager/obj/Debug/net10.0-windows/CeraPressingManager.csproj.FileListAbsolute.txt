@@ -1,0 +1,12 @@
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\CeraPressingManager.csproj.AssemblyReference.cache
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\DashboardWindow.baml
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\MainWindow.baml
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\NouvelleCommandeWindow.baml
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\DashboardWindow.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\MainWindow.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\src\Presentation\Views\NouvelleCommandeWindow.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\App.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\CeraPressingManager_Content.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\CeraPressingManager_MarkupCompile.cache
+C:\Users\ADONYA\OneDrive\Desktop\keyce\B2A\S1\C#\CC3\gestion\CeraPressingManager\obj\Debug\net10.0-windows\CeraPressingManager_MarkupCompile.lref
