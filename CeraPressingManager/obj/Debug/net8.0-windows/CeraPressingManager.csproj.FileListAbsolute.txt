@@ -1,0 +1,9 @@
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\CeraPressingManager.csproj.AssemblyReference.cache
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\src\Presentation\Views\DashboardWindow.baml
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\src\Presentation\Views\NouvelleCommandeWindow.baml
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\src\Presentation\Views\DashboardWindow.g.cs
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\src\Presentation\Views\NouvelleCommandeWindow.g.cs
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\CeraPressingManager_MarkupCompile.cache
+C:\Users\ADONYA\Downloads\gestion_app_fixed\home\ubuntu\gestion_app\gestion\CeraPressingManager\obj\Debug\net8.0-windows\CeraPressingManager_MarkupCompile.lref

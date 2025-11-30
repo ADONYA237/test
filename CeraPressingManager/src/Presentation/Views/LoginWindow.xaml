@@ -1,0 +1,31 @@
+﻿<Window x:Class="CeraPressingManager.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Connexion - Cera Pressing" Height="400" Width="500"
+        WindowStartupLocation="CenterScreen" Background="#2D3436">
+    <Grid Margin="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="CERA PRESSING" FontSize="36" FontWeight="Bold" 
+                   Foreground="#00B894" HorizontalAlignment="Center" Margin="0,0,0,40"/>
+
+        <TextBox Text="{Binding Login}" materialDesign:HintAssist.Hint="Nom d'utilisateur"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" Foreground="White"/>
+
+        <PasswordBox x:Name="passwordBox" Grid.Row="1" Margin="0,20"
+                     materialDesign:HintAssist.Hint="Mot de passe"
+                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+
+        <ComboBox Grid.Row="2" ItemsSource="{Binding Roles}" SelectedItem="{Binding SelectedRole}"
+                  DisplayMemberPath="Nom" Margin="0,20"/>
+
+        <Button Grid.Row="3" Content="SE CONNECTER" Command="{Binding ConnectCommand}"
+                CommandParameter="{Binding ElementName=passwordBox}"
+                Background="#00B894" Foreground="White" FontSize="18" Padding="20,12" Margin="0,30,0,0"/>
+    </Grid>
+</Window>

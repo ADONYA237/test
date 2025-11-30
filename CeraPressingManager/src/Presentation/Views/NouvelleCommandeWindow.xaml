@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="CeraPressingManager.Views.NouvelleCommandeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        Background="#FFF5F5F5">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Titre -->
+        <TextBlock Text="NOUVELLE COMMANDE" FontSize="28" FontWeight="Bold" 
+                   Foreground="#4A00E0" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Client -->
+        <GroupBox Grid.Row="0" Header="Client" FontWeight="Bold" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Client :" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox ItemsSource="{Binding Clients}" DisplayMemberPath="NomComplet" 
+                          SelectedItem="{Binding SelectedClient}" Width="300"/>
+                <Button Content="Nouveau Client" Command="{Binding OpenClientWindowCommand}" 
+                        Margin="10,0" Padding="15,8" Background="#8E2DE2"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Articles -->
+        <GroupBox Grid.Row="1" Header="Articles Déposés" FontWeight="Bold">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <DataGrid ItemsSource="{Binding Articles}" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,10">
+                    <DataGrid.Columns>
+                        <!-- Prestation -->
+                        <DataGridTemplateColumn Header="Prestation" Width="180">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.Prestations, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                              DisplayMemberPath="TypeVetement"
+                              SelectedItem="{Binding Prestation, UpdateSourceTrigger=PropertyChanged}"
+                              Width="160"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <!-- Quantité -->
+                        <DataGridTextColumn Header="Qté" Binding="{Binding Quantite}" Width="60"/>
+
+                        <!-- Couleur -->
+                        <DataGridTextColumn Header="Couleur" Binding="{Binding Couleur}" Width="100"/>
+
+                        <!-- Express -->
+                        <DataGridCheckBoxColumn Header="Express" Binding="{Binding EstExpress, UpdateSourceTrigger=PropertyChanged}"
+                                 Width="80"/>
+
+                        <!-- Photo Avant -->
+                        <DataGridTemplateColumn Header="Photo Avant" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="{Binding PhotoAvant, Converter={StaticResource PathToImageConverter}}"
+                               Width="50" Height="50" Margin="2"/>
+                                        <Button Content="Photo" 
+                                Command="{Binding DataContext.TakePhotoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                CommandParameter="{Binding}"
+                                Background="#FF6B00" Foreground="White" Padding="10,5"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <!-- Prix -->
+                        <DataGridTextColumn Header="Prix" Binding="{Binding PrixTotal, StringFormat='{}{0} FCFA'}" Width="100"/>
+
+                        <!-- Supprimer -->
+                        <DataGridTemplateColumn Width="80">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Supprimer" 
+                            Command="{Binding DataContext.RemoveArticleCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                            CommandParameter="{Binding}"
+                            Background="#E91E63" Foreground="White"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Grid.Row="1" Content="+ Ajouter Article" Command="{Binding AddArticleCommand}"
+                        HorizontalAlignment="Left" Margin="0,10" Padding="20,10" Background="#00C853"/>
+            </Grid>
+        </GroupBox>
+
+        <!-- Total + QR + Impression -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <StackPanel>
+                <TextBlock Text="{Binding MontantTotal, StringFormat='Total : {0} FCFA'}" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Text="{Binding RemiseText}" Foreground="Red" FontWeight="Bold"/>
+                <TextBlock Text="{Binding MontantAPayer, StringFormat='À payer : {0} FCFA'}" FontSize="24" FontWeight="Bold" Foreground="#4A00E0"/>
+            </StackPanel>
+
+            <Image Source="{Binding QRCodeImage}" Width="150" Height="150" Margin="30,0"/>
+
+            <StackPanel VerticalAlignment="Center">
+                <Button Content="Imprimer Ticket" Command="{Binding PrintCommand}" 
+                        Padding="30,15" FontSize="18" Background="#FF6B00" Foreground="White" Margin="20,0"/>
+                <Button Content="Valider Commande" Command="{Binding SaveCommand}" 
+                        Padding="40,20" FontSize="20" Background="#4A00E0" Foreground="White" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
